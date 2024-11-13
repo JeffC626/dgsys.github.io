@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Tahoma', sans-serif;
 }
 
 body {
@@ -43,6 +43,39 @@ main {
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+}
+
+#calendar-widget {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 5px;
+    padding: 10px;
+}
+
+.day {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.day.checked-in {
+    background-color: #8BC34A;
+    color: #fff;
+}
+
+#check-in-chart {
+    margin-top: 20px;
+    font-size: 1em;
 }
 
 /* Links */
