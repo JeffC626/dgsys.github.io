@@ -78,6 +78,51 @@ main {
     font-size: 1em;
 }
 
+#heatmap-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 5px;
+    padding: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.day {
+    width: 100%;
+    padding-top: 100%; /* Makes the grid items square */
+    position: relative;
+}
+
+.day-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #e0e0e0; /* Default color */
+    color: #333;
+}
+
+.day.low {
+    background-color: #c6e48b;
+}
+
+.day.medium {
+    background-color: #7bc96f;
+}
+
+.day.high {
+    background-color: #239a3b;
+}
+
+.day.very-high {
+    background-color: #196127;
+}
+
 /* Links */
 a {
     color: #007acc;
