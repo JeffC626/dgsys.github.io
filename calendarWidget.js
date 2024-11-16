@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         for (let day = 1; day <= daysInMonth; day++) {
             const dayElement = document.createElement("div");
-            dayElement.className = "day";
+            dayElement.className = "day1";
             dayElement.textContent = day;
             
             // Check-in functionality
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to update the check-in chart
     function updateCheckInChart() {
-        const checkedInDays = document.querySelectorAll(".day.checked-in").length;
+        const checkedInDays = document.querySelectorAll(".day1.checked-in").length;
         checkInChart.textContent = `Days Checked-In: ${checkedInDays}`;
     }
 
