@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             dayElement.className = "day";
 
             const dayContent = document.createElement("div");
-            dayContent.className = "day0-content";
+            dayContent.className = "day-content";
             dayContent.textContent = day;
 
             // Check-in logic: Increment check-in count on click
