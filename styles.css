@@ -12,12 +12,18 @@ body {
     line-height: 1.6;
     font-size: 16px;
     padding: 20px;
+    /* Column style with Grid*/
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr;/*repeat(3, 1fr); */
+    margin: 0;
+    /*padding: 0;*/
+    gap: 10px;
 }
 
 /* Header styling */
 header {
-    background-color: #007acc; /* A blue header */
-    color: #fff;
+    background-color: #d0e0e3; /* A blue header */
+    color: #f80;
     padding: 10px 20px;
     text-align: center;
 }
@@ -60,6 +66,35 @@ main {
     padding: 10px;
 }
 
+#current-date {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.today{
+    background-color: #f80;
+    font-weight: bold;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* One column for each day */
+    gap: 2px; /* Add spacing if needed */
+    padding: 2px;
+    width: 100%; /* Match calendar grid width */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1px; /* Add spacing below weekdays */
+}
+
+.weekday {
+    padding: 2px;
+    background-color: #f0f0f0; /* Light background for weekdays */
+    border-radius: 4px;
+}
+
 .day1 {
     padding: 15px;
     border: 1px solid #ddd;
@@ -98,7 +133,7 @@ main {
      border: 1px solid #ddd;
      border-radius: 5px;
      cursor: pointer;
-    /* user-select: none;*/
+     user-select: none;
  }
 
 .day2 {
@@ -126,18 +161,22 @@ main {
 
 .day.low {
     background-color: #c6e48b;
+    color: #fff;
 }
 
 .day.medium {
     background-color: #7bc96f;
+    color: #fff;
 }
 
 .day.high {
     background-color: #239a3b;
+    color: #fff;
 }
 
 .day.very-high {
     background-color: #196127;
+    color: #fff;
 }
 
 /* Links */
@@ -158,3 +197,36 @@ footer {
     font-size: 0.9em;
 }
 
+/* Column */
+.column {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.column:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+.column:nth-child(even) {
+    background-color: #d0d0d0;
+}
+/* Image Container */
+.image-container {
+        position: relative;
+        display: inline-block;
+}
+ 
+.image-container img {
+        display: block;
+        width: 50%;
+        height: auto;
+}
+ 
+.image-container .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        color: #f80;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+}

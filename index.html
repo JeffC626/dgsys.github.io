@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
+
+<!-- The first column -->
+<div class = "column">
     <header>
-        <h1>Welcome to My Widget Site</h1>
+        <h1>Welcome </h1>
+        <div class = "image-container">
+            <img src="./images/Selfie-chin.png" alt="logo图片">
+            <div class="text-overlay">这是个奇妙的过程网站……</div>
+        </div>
     </header>
     <main>
         <!-- Embed your Notion widget here -->
-        <div id="notion-widget"></div>
+        <!--<div id="notion-widget"></div> -->
         <div class = "embed-container">
-         <iframe src="https://httishere.github.io/notion-widget/v220/progress.html?e=tmnU%2FS99nK8x%2Bo4R5xIWE32RIR7rNMwQHXCgrReVKAY%3D" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+         <iframe src="https://httishere.github.io/notion-widget/v220/progress.html?e=tmnU%2FS99nK8x%2Bo4R5xIWE32RIR7rNMwQHXCgrReVKAY%3D" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
          </div>
          <!-- <script src="embedWidget.js"></script> -->
     </main>
@@ -27,6 +34,15 @@
         <!-- Embed your heatmap calendar widget here -->
     <div id="heatmap-calendar-widget">
         <h2>Check-In Heatmap Calendar</h2>
+        <div class = "calendar-weekdays">
+            <div class="weekday">Sun</div>
+            <div class="weekday">Mon</div>
+            <div class="weekday">Tue</div>
+            <div class="weekday">Wed</div>
+            <div class="weekday">Thu</div>
+            <div class="weekday">Fri</div>
+            <div class="weekday">Sat</div>
+        </div>
         <div id="heatmap-calendar"> </div>
     </div>
     <script src="heatmapCalendarWidget.js"></script>
@@ -34,11 +50,27 @@
         <!-- Embed your calendar widget here -->
     <div id="calendar-widget">
         <h2>Daily Check-In Calendar</h2>
-        <div id="calendar"></div>
+        <div id="current-date"></div>
+        <div class = "calendar-weekdays">
+            <div class="weekday">Sun</div>
+            <div class="weekday">Mon</div>
+            <div class="weekday">Tue</div>
+            <div class="weekday">Wed</div>
+            <div class="weekday">Thu</div>
+            <div class="weekday">Fri</div>
+            <div class="weekday">Sat</div>
+        </div>
+        <div id="calendar"> </div>
         <div id="check-in-chart"></div>
     </div>
     <script src="calendarWidget.js"></script> <!-- Link to the JavaScript file -->
+    </div>
 
+<!-- The second column -->
+   <div class="column">栏 2</div>
+
+<!-- The third column -->
+   <div class="column">栏 3</div>
 </body>
 </html>
 
